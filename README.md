@@ -82,7 +82,7 @@ If you'd like to collaborate on this project or report issues, please visit the 
 
 ## Help and Support
 
-For any questions, feedback, or support requests, please contact us at smtp@example.com.
+For any questions, feedback, or support requests, please contact us at https://github.com/minikube-mini-projects/smtp-email-app.git.
 
 ```
 
