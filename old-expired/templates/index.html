@@ -1,0 +1,116 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMTP Email Testing App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Light grey background */
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4b4b4c; /* Blue header background */
+            color: #fff; /* White header text color */
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer {
+            background-color: #171717; /* Blue footer background */
+            color: #fff; /* White footer text color */
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff; /* White container background */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for container */
+        }
+        h1, h2 {
+            color: #333; /* Dark grey text color */
+        }
+        p {
+            color: #666; /* Medium grey text color */
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #383737; /* Dark grey label color */
+        }
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="password"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc; /* Light grey border */
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0000ff; /* Blue button color */
+            color: #fff; /* White button text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker blue hover color */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SMTP Email Testing App</h1>
+    </header>
+    <div class="container">
+        <p>Welcome to the SMTP Email Testing App. This app allows you to test SMTP email sending functionality by providing your SMTP server details and email content.</p>
+        <h2>Features:</h2>
+        <ul>
+            <li>Test SMTP email sending functionality</li>
+            <li>Input SMTP server details directly in the app</li>
+            <li>Send test emails with custom subject and body</li>
+            <li>Receive success or failure messages for email sending</li>
+        </ul>
+        <h2>Collaboration:</h2>
+        <p>If you'd like to collaborate on this project or report issues, please visit the <a href="https://github.com/minikube-mini-projects/smtp-email-app.git">GitHub repository</a>.</p>
+        <form action="/send_email" method="post">
+            <label for="host">SMTP Host:</label>
+            <input type="text" id="host" name="host" required>
+            <label for="port">SMTP Port:</label>
+            <input type="number" id="port" name="port" required>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <label for="to">To:</label>
+            <input type="email" id="to" name="to" required>
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            <label for="body">Body:</label>
+            <textarea id="body" name="body" rows="4" required></textarea>
+            <button type="submit">Send Email</button>
+        </form>
+    </div>
+    <footer>
+        <p>Contact: ahmadrazalab | Website: <a href="https://github.com/minikube-mini-projects/smtp-email-app.git">github.com</a></p>
+    </footer>
+</body>
+</html>
